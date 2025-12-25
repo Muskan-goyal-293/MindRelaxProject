@@ -1,0 +1,423 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+:root {
+  --first: #f2f8ff;
+  --sec: #dbe9ff;
+  --third: #9bbcff;
+  --four: #2f4f9f;
+}
+
+nav div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+}
+nav div select {
+  background-color: var(--third);
+  padding: 0.5rem;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  outline: none;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  color: white;
+  text-transform: capitalize;
+}
+nav {
+  height: 4rem;
+  width: 100%;
+  background-color: var(--four);
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+.homepage {
+  height: 100%;
+  padding: 5rem 0rem;
+  background-color: var(--third);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+header {
+  height: 10rem;
+  background-color: var(--four);
+  width: 100%;
+  border-radius: 2rem;
+  padding: 1rem;
+}
+header h1 {
+  font-size: 1.5rem;
+}
+.commonboxes {
+  height: 18rem;
+  width: 14rem;
+  border: 1px solid var(--four);
+  border-radius: 1rem;
+  overflow: hidden;
+  -webkit-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.commonboxes:hover {
+  scale: 0.9;
+  -webkit-box-shadow: 0px 0px 2rem var(--four);
+  box-shadow: 0px 0px 2rem var(--four);
+}
+.commonsec {
+  height: 100%;
+  width: 100%;
+  background-color: var(--third);
+  position: fixed;
+  top: 0;
+  padding: 5rem;
+  display: none;
+}
+.back {
+  padding: 0.5rem 0.7rem;
+  background-color: var(--sec);
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 1.2rem;
+  color: var(--four);
+  -webkit-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  position: absolute;
+  right: 5rem;
+}
+.back:hover {
+  -webkit-box-shadow: 0px 0px 2rem var(--sec);
+  box-shadow: 0px 0px 2rem var(--sec);
+  scale: 0.9;
+}
+.jokeboxes {
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+#firstbox {
+  background-color: var(--four);
+  margin-top: 1rem;
+}
+#secbox {
+  background-color: var(--third);
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@-webkit-keyframes circle {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+@keyframes circle {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+#thirdbox {
+  border: 8px solid transparent;
+  background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from(var(--four)),
+        color-stop(var(--third)),
+        color-stop(var(--four)),
+        to(var(--four))
+      )
+      padding-box,
+    conic-gradient(
+        from var(--angle) at center,
+        var(--four),
+        var(--third),
+        var(--four),
+        var(--third),
+        var(--four)
+      )
+      border-box;
+  background: -o-linear-gradient(
+        var(--four),
+        var(--third),
+        var(--four),
+        var(--four)
+      )
+      padding-box,
+    conic-gradient(
+        from var(--angle) at center,
+        var(--four),
+        var(--third),
+        var(--four),
+        var(--third),
+        var(--four)
+      )
+      border-box;
+  background: linear-gradient(
+        var(--four),
+        var(--third),
+        var(--four),
+        var(--four)
+      )
+      padding-box,
+    conic-gradient(
+        from var(--angle) at center,
+        var(--four),
+        var(--third),
+        var(--four),
+        var(--third),
+        var(--four)
+      )
+      border-box;
+  -webkit-animation: circle 5s linear infinite;
+  animation: circle 5s linear infinite;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+  overflow: auto;
+}
+#thirdbox:hover {
+  -webkit-box-shadow: 0px 0px 2rem var(--sec), 0px 0px 2rem var(--four);
+  box-shadow: 0px 0px 2rem var(--sec), 0px 0px 2rem var(--four);
+}
+#thirdbox h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: black;
+}
+.commonp {
+  color: white;
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+}
+.container {
+  margin-top: 1.5rem;
+  height: 75vh;
+  width: 100%;
+  background-color: var(--four);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.forms {
+  max-width: 500px;
+  border-radius: 1.2rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  padding: 0.7rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.8rem;
+  -webkit-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.forms input,
+.saidinput {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  color: #fff;
+}
+
+.forms input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.forms input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.forms input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.forms input::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.forms input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.commonbtn {
+  padding: 0.5rem 1.2rem;
+  background: -o-linear-gradient(315deg, var(--four), var(--sec));
+  background: linear-gradient(135deg, var(--four), var(--sec));
+  border-radius: 2rem;
+  border: none;
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.2s ease, -webkit-box-shadow 0.2s ease;
+  transition: -webkit-transform 0.2s ease, -webkit-box-shadow 0.2s ease;
+  -o-transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    -webkit-transform 0.2s ease, -webkit-box-shadow 0.2s ease;
+}
+.commonbtn:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+  -webkit-box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+.alltodo,
+.thankyoudisplaybox,
+.emojestrack {
+  height: 60vh;
+  width: 100%;
+  padding: 1rem;
+  overflow: auto;
+}
+.todochild,
+.emojebox {
+  border-radius: 1rem;
+  background-color: var(--third);
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.4rem;
+}
+.todochild .tag,
+.date {
+  padding: 0.2rem 0.5rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  background: var(--four);
+  color: #fff;
+}
+.todobox .todotext {
+  width: 80%;
+  font-size: 1.2rem;
+  overflow: auto;
+}
+.thankyouchild {
+  border-radius: 1rem;
+  background-color: var(--third);
+  padding: 0.5rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.4rem;
+}
+.thankyoucontainer {
+  background-position: center;
+  background-size: cover;
+  -webkit-transition: all ease-in 0.5s;
+  -o-transition: all ease-in 0.5s;
+  transition: all ease-in 0.5s;
+  margin: 0%;
+}
+.emojieee {
+  background-position: center;
+  background-size: cover;
+}
+.outerdiv {
+  margin-top: 1rem;
+  border: 8px solid transparent;
+  background: conic-gradient(
+      from var(--angle) at center,
+      var(--four),
+      var(--third),
+      var(--four),
+      var(--third),
+      var(--four)
+    )
+    border-box;
+  -webkit-animation: circle 5s linear infinite;
+  animation: circle 5s linear infinite;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+.saidmsgp {
+  font-size: 1.2rem;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+.saidmsg {
+  overflow: auto;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}

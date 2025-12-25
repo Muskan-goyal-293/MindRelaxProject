@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your space. Your pace</title>
+    <link rel="shortcut icon" href="./image/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <nav>
+        <div>
+        <h1>Your space. Your pace.</h1>
+      <select name="Theam" id="theam">
+    <option value="default">Default</option>
+<option value="dark">Dark</option>
+<option value="mintgreen">MintGreen</option>
+<option value="blue">Blue</option>
+<option value="purple">Purple</option>
+<option value="rosemint">RoseMint</option>
+<option value="brown">Brown</option>
+<option value="orange">Orange</option>
+      </select>  
+      
+      </div>
+      </nav>
+      <section class="homepage">
+        <header>
+          <h1 class="headerh1"></h1>
+        </header>
+        <div class="commonboxes joke" id="0">
+          <img src="./image/happy.jpeg" alt="joke" />
+        </div>
+        <div class="commonboxes todo" id="1">
+          <img src="./image/todo.jpeg" alt="todo" />
+        </div>
+        <div class="commonboxes positive" id="2">
+          <img src="./image/thankyou.jpeg" alt="positive" />
+        </div>
+        <div class="commonboxes negative" id="3">
+          <img src="./image/said.jpeg" alt="negative" />
+        </div>
+        <div class="commonboxes emojis" id="4">
+          <img src="./image/emojis.jpeg" alt="emojis" />
+        </div>
+      </section>
+
+      <!-- this secion show random j0ke -->
+      <section class="commonsec">
+        <button class="back" id="0">Back</button>
+        <h2>Jokes of the day</h2>
+        <div class="jokeboxes" id="firstbox">
+          <div class="jokeboxes" id="secbox">
+            <div class="jokeboxes" id="thirdbox">
+              <h3>
+                SetUp :
+                <p class="setup commonp"></p>
+              </h3>
+              <h3>
+                PunchLine :
+                <p class="punchline commonp"></p>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- this section  use to make note page -->
+      <section class="commonsec">
+        <button class="back" id="1">Back</button>
+        <h2 class="todoh2">Your Todo</h2>
+        <div class="todobox container">
+          <form class="todoform forms">
+            <input
+              type="text"
+              placeholder="Enter your Todo"
+              class="todoinput"
+            />
+            <div class="important">
+              <input type="checkbox" id="important" />
+              <label for="important">Mark as important</label>
+            </div>
+            <button type="submit" class="commonbtn">Add</button>
+          </form>
+          <div class="alltodo"></div>
+        </div>
+      </section>
+
+      <!-- this section is use to make thankyou page -->
+      <section class="commonsec">
+        <button class="back" id="2">Back</button>
+        <h2 class="thankyouh2">Our Time</h2>
+        <div class="outerdiv">
+          <div class="thankyoucontainer container">
+            <div class="thankyoudiv">
+              <form class="thankyouform forms">
+                <input
+                  type="text"
+                  name=""
+                  id="thankyouinputmsg"
+                  placeholder="Enter your msg"
+                />
+                <button class="thankyoubtn commonbtn" type="submit">add message</button>
+              </form>
+            </div>
+            <div class="thankyoudisplaybox"></div>
+          </div>
+        </div>
+      </section>
+      <!-- this is negative thougth page -->
+      <section class="commonsec">
+        <button class="back" id="3">Back</button>
+        <h2 class="saidh2">said</h2>
+        <div class="parentdiv container">
+          <div class="saidformbox forms">
+            <form class="saidform">
+              <input
+                type="text"
+                class="saidinput"
+                placeholder="Enter your Today Felling"
+              />
+              <button class="saidbtn commonbtn">Add msg</button>
+            </form>
+          </div>
+          <div class="saidmsg">
+            <p class="saidmsgp"></p>
+          </div>
+        </div>
+      </section>
+      <section class="commonsec" id="emojis">
+        <button class="back" id="4">Back</button>
+        
+        <h2>😀😅😑😶🙄</h2>
+
+<div class="container emojieee">
+<div class="emojis">
+<button id="smile"  class="emojis-btn commonbtn">😃</button>
+<button id="confuse" class="emojis-btn commonbtn">😅</button>
+<button id="nomood" class=" emojis-btn commonbtn">😑</button>
+<button  id="said" class="emojis-btn commonbtn">😞</button>
+<button id="angree"  class="emojis-btn commonbtn">😡</button>
+<button id="save" class=" commonbtn">Save</button>
+</div>
+
+<div class="emojestrack">
+<div class="emojebox">
+  <span class="date">01</span>
+  <div class="emojisimg">😀</div>
+</div>
+
+</div>
+</div>
+
+
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
